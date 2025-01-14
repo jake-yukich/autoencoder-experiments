@@ -10,6 +10,8 @@ numpy = "*"
 matplotlib = "*"
 pyyaml = "*"
 tqdm = "*"
+setuptools = "*"
+autoencoder-experiments = {file = ".", editable = true}
 
 [dev-packages]
 pytest = "*"

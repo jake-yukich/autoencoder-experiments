@@ -9,6 +9,9 @@ __pycache__/
 *.so
 
 # Project specific
-data/dumps/
+src/data/dumps/
 logs/
 src/models/checkpoints/
+
+*.egg-info/
+*.egg

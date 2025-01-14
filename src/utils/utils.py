@@ -9,6 +9,16 @@ def add_noise(data, noise_level=0.2):
     noise = torch.randn_like(data).to(data.device) * noise_level
     return data + noise
 
+# Pickleable Noise Transform:
+# class NoiseTransform:
+#     """Transform class for adding Gaussian noise to images"""
+#     def __init__(self, intensity):
+#         self.intensity = intensity
+    
+#     def __call__(self, x):
+#         noise = torch.randn_like(x) * self.intensity
+#         return torch.clamp(x + noise, 0, 1)
+
 # LOAD CONFIG:
 # -------------------------------------------------------------------------------------------------
 
