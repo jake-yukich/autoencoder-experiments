@@ -1,0 +1,14 @@
+# Pipenv
+.venv/
+.env
+
+# Python general
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Project specific
+data/dumps/
+logs/
+src/models/checkpoints/
