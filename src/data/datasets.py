@@ -51,7 +51,6 @@ class BaseDataset:
         """Get transforms based on dataset config"""
         transform_list = []
         
-        # Add basic transforms
         transform_list.extend([
             transforms.ToTensor(),
             transforms.Normalize(**self.config['dataset'].get('normalize', 
