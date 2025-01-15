@@ -1,0 +1,51 @@
+# Training configuration
+dataset:
+  name: "MNIST"
+  batch_size: 128
+  num_workers: 16
+  data_dir: "src/data/dumps"
+
+training:
+  epochs: 10
+  learning_rate: 0.001
+  optimizer:
+    type: "Adam"
+    betas: [0.9, 0.999]
+  scheduler:
+    type: "ReduceLROnPlateau"
+    patience: 3
+    factor: 0.1
+
+# # Main training config
+# name: "mnist_autoencoder"
+# model_config: "configs/models/conv_ae.yaml"  # Path to model config
+
+# # Dataset settings
+# dataset:
+#   name: "MNIST"
+#   batch_size: 32
+#   num_workers: 4
+#   data_dir: "data/mnist"
+
+# # Training parameters
+# training:
+#   epochs: 10
+#   learning_rate: 0.001
+#   optimizer:
+#     type: "Adam"
+#     params:
+#       betas: [0.9, 0.999]
+  
+#   # Optional scheduler
+#   scheduler:
+#     type: "ReduceLROnPlateau"
+#     params:
+#       patience: 3
+#       factor: 0.1
+
+# # Logging settings
+# logging:
+#   save_dir: "experiments/mnist_ae"
+#   log_interval: 100
+#   save_interval: 1000
+#   use_wandb: false

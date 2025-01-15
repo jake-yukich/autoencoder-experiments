@@ -1,4 +1,11 @@
 # autoencoder-experiments
+
+## Motivation
+...
+
+## Usage
+`pipenv shell`
+
 Project structure:
 ```text
 autoencoder-experiments/
@@ -67,8 +74,6 @@ Key organizational principles:
   * Easy to run different experiments
 
 ---
-
-
 
 Example of how to use configs:
 
@@ -236,3 +241,15 @@ Benefits of this approach:
 
 (Could also extend to use tools like Hydra.)
 
+- [ ] more ideas for extensions: e.g. Documenting training stats in Weights & Biases, doing cross-fold validation of final model, deploying the model with Gradio + Hugging Face Spaces.
+- [ ] different kinds of noise, data augmentation, noise and masking for better inpainting, etc.
+- [ ] latent space traversal, latent space interpolation, etc.
+
+`train.py` usage:
+```bash
+# Train with default model config specified in training config
+python scripts/train.py --config configs/training/mnist_ae.yaml
+
+# Or override with different model config
+python scripts/train.py --config configs/training/mnist_ae.yaml --model-config configs/model_configs/different_ae.yaml
+```
